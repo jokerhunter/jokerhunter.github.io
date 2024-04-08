@@ -11,7 +11,7 @@ jobs:
         node-version: [16.x]
 
     steps:
-      - uses: actions/checkout@main
+      - uses: actions/checkout@docs
         with:
           fetch-depth: 0
       - uses: pnpm/action-setup@v2.2.2
@@ -33,7 +33,7 @@ jobs:
         uses: crazy-max/ghaction-github-pages@v3
         with:
           # deploy to docs branch
-          target_branch: gh-pages
+          target_branch: main
           # deploy the default output dir of VuePress
           build_dir: .vuepress/dist
         env:
